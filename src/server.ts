@@ -31,7 +31,9 @@ app.get('/nitroRedirect', (req: express.Request, res: express.Response) => {
 app.get('/', (req: express.Request, res: express.Response) => {
     res.render('nitro', { title: 'Nitro' });
 });
-
+app.get('/closed', (req: express.Request, res: express.Response) => {
+    res.render('errclosed', {title: 'Promotion Ended' });
+});
 
 app.listen(port, () => {
     console.log(`App on http://0.0.0.0:${port}`);
